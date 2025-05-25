@@ -1,4 +1,3 @@
-
 import { Brain, Code, Cpu, Rocket, Users } from 'lucide-react';
 
 const About = () => {
@@ -45,15 +44,15 @@ const About = () => {
           
           <div className="flex justify-center items-center">
             <div className="tech-card w-full max-w-md aspect-square flex flex-col justify-center items-center p-8 rounded-lg">
-              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-tech-purple/30 flex items-center justify-center mb-6">
+              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-tech-cyan/30 flex items-center justify-center mb-6">
                 {/* Placeholder for profile image */}
-                <div className="bg-tech-purple/20 w-full h-full flex items-center justify-center text-tech-purple">
+                <div className="bg-tech-cyan/20 w-full h-full flex items-center justify-center text-tech-cyan">
                   <span className="text-4xl font-bold">ES</span>
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-white text-center">Erfan Shafiee Moghadam</h3>
-              <p className="text-gray-400 text-center mt-2">AI Developer & ML/NLP Specialist</p>
-              <p className="text-gray-400 text-center mt-1">SmartEra Organization</p>
+              <p className="text-gray-400 text-center mt-2">AI Engineer & ML/NLP Specialist</p>
+              <p className="text-gray-400 text-center mt-1">MemaranSoft | SmartEra Organization</p>
             </div>
           </div>
         </div>
@@ -65,7 +64,7 @@ const About = () => {
 const SkillListItem = ({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) => {
   return (
     <li className="flex items-start space-x-3 text-gray-300">
-      <div className="flex-shrink-0 w-6 h-6 mt-1 text-tech-purple">
+      <div className="flex-shrink-0 w-6 h-6 mt-1 text-tech-cyan">
         {icon}
       </div>
       <span>{children}</span>

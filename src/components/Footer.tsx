@@ -1,4 +1,3 @@
-
 import { Heart } from 'lucide-react';
 
 const Footer = () => {
@@ -10,14 +9,14 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <span className="font-bold text-xl">
-              <span className="text-tech-purple">Erfan</span>
-              <span className="text-white">.dev</span>
+              <span className="text-tech-cyan">ErfanShm</span>
+              <span className="text-white">.com</span>
             </span>
           </div>
           
           <div className="text-center md:text-right text-sm text-gray-400">
             <p className="flex items-center justify-center md:justify-end">
-              Built with <Heart size={14} className="text-tech-purple mx-1" /> using React & Tailwind CSS
+              Crafted with React & Tailwind CSS.
             </p>
             <p>© {currentYear} Erfan Shafiee Moghadam. All rights reserved.</p>
           </div>

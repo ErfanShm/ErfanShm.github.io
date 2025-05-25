@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,35 +6,45 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 220 15% 10%;
+    --foreground: 220 10% 95%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 15% 12%;
+    --card-foreground: 220 10% 95%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 10% 95%;
 
-    --primary: 263.4 70% 75%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 190 95% 60%;
+    --primary-foreground: 220 15% 10%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 220 10% 20%;
+    --secondary-foreground: 220 10% 85%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 220 10% 25%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: var(--primary);
+    --accent-foreground: var(--primary-foreground);
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 220 10% 20%;
+    --input: 220 10% 18%;
+    --ring: 190 95% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    html {
+      @apply scroll-smooth;
+    }
+
+    body {
+      @apply bg-background text-foreground font-sans antialiased;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
   }
 }
 
@@ -44,42 +53,29 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground font-sans;
-  }
-
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 text-white relative inline-block;
+    @apply text-3xl md:text-4xl font-bold mb-8 text-foreground relative inline-block;
   }
   
   .section-title::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-tech-purple rounded-full;
+    @apply absolute bottom-[-4px] left-0 w-1/2 h-1 bg-primary rounded-full;
   }
   
   .tech-card {
-    @apply bg-secondary p-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(155,135,245,0.3)] border border-gray-800;
-  }
-  
-  .tech-gradient {
-    background: linear-gradient(135deg, #1A1F2C 0%, #2A2F3C 100%);
+    @apply bg-card text-card-foreground p-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)] border border-border;
   }
   
   .highlight-text {
-    @apply text-tech-purple font-semibold;
+    @apply text-primary font-semibold;
   }
   
   .experience-timeline-item::before {
     content: '';
-    @apply absolute left-0 top-2 w-4 h-4 rounded-full bg-tech-purple -ml-[10px];
+    @apply absolute left-0 top-2 w-4 h-4 rounded-full bg-primary -ml-[9px] border-2 border-background;
   }
   
   .skill-bar {
-    @apply h-2 bg-tech-purple rounded-full relative overflow-hidden;
-  }
-  
-  .skill-bar::after {
-    content: '';
-    @apply absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-tech-purple to-tech-blue opacity-75;
+    @apply h-2 bg-primary rounded-full relative overflow-hidden;
   }
 }
